@@ -39,7 +39,7 @@
     color: #1A1B22;
     border: none;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 1250px) {
     .news-card-list-border {
         max-width: 768px;
     }
@@ -54,7 +54,7 @@
         width: 240px;
     }
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 650px) {
     .news-card-list-border {
         max-width: 320px;
         padding-left: 16px;
@@ -63,5 +63,10 @@
     .news-card-list__button {
         width: 288px;
         margin-left: 0;
+    }
+    .news-card-list {
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     }
 }

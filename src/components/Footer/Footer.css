@@ -73,7 +73,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 1250px) {
     .footer {
         max-width: 768px;
         padding-left: 40px;
@@ -92,7 +92,7 @@
            width: 88px;
        }
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 650px) {
     .footer {
         max-width: 320px;
         padding-left: 16px;

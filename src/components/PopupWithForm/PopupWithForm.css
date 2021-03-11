@@ -132,12 +132,15 @@
     border: none;
     background-color: transparent;
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 650px) {
+    .popup {
+        max-width: 320px;
+    }
     .popup__container {
         height: 520px;
         width: 320px;
         left: 0;
-        top: 0;
+        top: -300px;
     }
     .popup__input-title {
         margin-left: 16px;
@@ -152,4 +155,8 @@
         margin-left: 16px;
         margin-right: 16px;
     }
+    .popup__close {
+        top: -37px;
+        right: 1px;
+      }
 }

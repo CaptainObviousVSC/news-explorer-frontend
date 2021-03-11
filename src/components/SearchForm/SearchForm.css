@@ -70,7 +70,7 @@
 .search-form__button:active {
     background-color: #2A65CC;
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 650px) {
     .search-form {
         max-width: 320px;
         height: 536px;

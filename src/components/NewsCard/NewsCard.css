@@ -130,7 +130,7 @@
  font-size: 14px;
  line-height: 24px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 1250px) {
     .news-card {
         max-width: 224px;
         border-radius: 15px;
@@ -154,7 +154,7 @@
         margin-right: 16px;
     }
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 650px) {
     .news-card {
         max-width: 288px;
         border-radius: 15px;
