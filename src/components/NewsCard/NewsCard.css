@@ -1,0 +1,180 @@
+.news-card {
+    max-width: 400px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    border-radius: 30px;
+}
+.news-card__img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height: 272px;
+    background-position: center;
+    object-fit: cover;
+}
+.news-card__main-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.news-card__text-box {
+    display: flex;
+    flex-direction: column;
+}
+.news-card__date {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    width: 128px;
+    line-height: 24px;
+    margin-left: 24px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: #B6BCBF;
+}
+.news-card__title {
+    font-family: 'Roboto';
+    max-width: 352px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1B22;
+}
+.news-card__text {
+    max-width: 352px;
+    height: 110px;
+    margin-left: 24px;
+    margin-right: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #1A1B22;
+}
+.news-card__source {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    margin-left: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px; 
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #B6BCBF; 
+}
+.news-card__save {
+    background-color: white;
+    position: absolute;
+    background-image: url(../../images/save-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    top: 24px;
+    right: 24px;
+}
+.news-card__save:hover {
+    background-image: url(../../images/save-button_hover.svg);
+}
+.news-card__save:active {
+    background-image: url(../../images/save-button_active.svg);
+}
+.news-card__delete {
+    background-color: white;
+    position: absolute;
+    background-image: url(../../images/trash.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    top: 24px;
+    right: 24px;
+}
+.news-card__delete:hover {
+    background-image: url(../../images/trash_hover.svg);
+}
+.news-card__keyword-box {
+    top: 24px;
+    left: 24px;
+    border-radius: 7px;
+    height: 40px;
+    max-width: 112px;
+    position: absolute;
+    background-color: white;
+    align-items: center;
+}
+.news-card__keyword {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 8px;
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 14px;
+ line-height: 24px;
+}
+@media all and (max-width: 768px) {
+    .news-card {
+        max-width: 224px;
+        border-radius: 15px;
+        height: 420px;
+    }
+    .news-card__img {
+        height: 150px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .news-card__date {
+        margin-top: 16px;
+    }
+    .news-card__text {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 5px;
+    }
+    .news-card__title {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+@media all and (max-width: 320px) {
+    .news-card {
+        max-width: 288px;
+        border-radius: 15px;
+        height: 446px;
+    }
+    .news-card__img {
+        height: 196px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .news-card__date {
+        margin-top: 16px;
+    }
+    .news-card__text {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 5px;
+    }
+    .news-card__title {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
