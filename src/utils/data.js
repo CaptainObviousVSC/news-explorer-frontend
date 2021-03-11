@@ -2,7 +2,7 @@ import img1 from './images-for-data/image_01.svg'
 import img2 from './images-for-data/image_04.svg'
 import img3 from './images-for-data/image_05.svg'
 import img4 from './images-for-data/image_07.svg'
-import img5 from './images-for-data/image_08.svg'
+import img5 from './images-for-data/image_07.svg'
 import img6 from './images-for-data/image_06.svg'
 export default [ 
     { 
