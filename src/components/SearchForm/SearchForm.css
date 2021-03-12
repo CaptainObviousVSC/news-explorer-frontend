@@ -73,7 +73,7 @@
 @media all and (max-width: 650px) {
     .search-form {
         max-width: 320px;
-        height: 536px;
+        height: 450px;
     }
     .search-form__title {
         width: 285px;

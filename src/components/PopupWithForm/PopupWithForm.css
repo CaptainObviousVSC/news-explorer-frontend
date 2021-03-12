@@ -11,8 +11,6 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 1s, opacity 2s;
-    align-items: center;
-    justify-content: center;
   }
   .popup_opened {
     visibility: visible;
@@ -132,7 +130,7 @@
     border: none;
     background-color: transparent;
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 320px) {
     .popup {
         max-width: 320px;
     }
@@ -140,7 +138,7 @@
         height: 520px;
         width: 320px;
         left: 0;
-        top: -300px;
+        /* top: -300px; */
     }
     .popup__input-title {
         margin-left: 16px;

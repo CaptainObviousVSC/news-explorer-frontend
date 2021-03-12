@@ -11,12 +11,15 @@ import AuthorizePopup from '../AuthorizePopup/AuthorizePopup'
 import ConfirmAuthorizePopup from '../ConfirmAuthorizePopup/ConfirmAuthorizePopup'
 import NewsCardList from '../NewsCardList/NewsCardList'
 import NotFoundCard from '../NotFoundCards/NotFoundCards'
+import SavedNewsHeaderPopup from '../SavedNewsHeaderPopup/SavedNewsHeaderPopup'
 import data from '../../utils/data'
 import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from 'react-dom';
+import Header from '../Header/Header';
 
 function App() {
     const [loginPopupOpen, setLoginPopupOpen] = React.useState(false)
     const [authorizePopupOpen, setAuthorizeOpen] = React.useState(false)
+    const [headerPopupOpen, setHeaderOpen] = React.useState(false)
     const [confirmAuthorizePopupOpen, setConfirmAuthorizePopupOpen] = React.useState(false)
     const [cards, setCards] = React.useState(data)
     //  const [cards, setCards] = React.useState([])
@@ -32,9 +35,13 @@ function App() {
             return <NotFoundCard />
         }
     }
+    function handleHeaderPopupOpen () {
+        setHeaderOpen(true)
+    }
     function handleLoginPopupOpen() {
         document.addEventListener('keyup', closeByEsc)
         setLoginPopupOpen(true)
+        setHeaderOpen(false)
         setConfirmAuthorizePopupOpen(false)
         setAuthorizeOpen(false)
     }
@@ -59,6 +66,7 @@ function App() {
         }
     function closePopups() {
         document.removeEventListener('keyup', closeByEsc)
+        setHeaderOpen(false)
         setLoginPopupOpen(false)
         setAuthorizeOpen(false)
         setConfirmAuthorizePopupOpen(false)
@@ -67,11 +75,20 @@ function App() {
     < div className = "app" >
           <Switch>
             <Route path="/savedNews">
-                    <SavedNewsHeader />
+                <SavedNewsHeaderPopup
+                isOpen={headerPopupOpen}
+                onClose={closePopups}
+                />
+                    <SavedNewsHeader 
+                    onHeaderPopup={handleHeaderPopupOpen}
+                    />
                     <NewsCardList cards={cards} />
                 </Route>
             <Route path="/">
            <Navigation 
+           isOpen={headerPopupOpen}
+           onClose={closePopups}
+           onHeaderPopup={handleHeaderPopupOpen}
                 onLoginPopup={handleLoginPopupOpen}
                 onAuthorizePopup={handleAuthorizePopupOpen}
            />
