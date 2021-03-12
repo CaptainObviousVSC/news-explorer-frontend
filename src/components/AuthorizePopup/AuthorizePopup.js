@@ -10,11 +10,11 @@ function AuthorizePopup({ isOpen, onClose, onLoginPopup, onConfirmAuthorizePopup
             <p className="popup__input-title">Email</p>
             <input type="email" name="email"  className="popup__input popup__input_value-email"
                 placeholder="Введите почту" required />
-            <span className="popup__error" id="email-error"></span>
+            <span className="popup__error" id="email-error-2"></span>
             <p className="popup__input-title">Пароль</p>
             <input type="password" name="password"  className="popup__input popup__input_value-password"
                 placeholder="Введите пароль" required />
-            <span className="popup__error" id="password-error"></span>
+            <span className="popup__error" id="password-error-2"></span>
             <p className="popup__input-title">Имя</p>
             <input type="text" name="name"  className="popup__input popup__input_value-name"
                 placeholder="Введите своё имя" required />

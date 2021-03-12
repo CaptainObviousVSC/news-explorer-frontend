@@ -63,8 +63,13 @@
         padding-top: 16px;
         flex-direction: column;
     }
+    .about__text-box {
+        max-width: 320px;
+    }
     .about__avatar {
+        width: 272px;
         height: 232px;
+        margin-right: 0;
     }
     .about__title {
         max-width: 288px;

@@ -149,7 +149,7 @@ opacity: 0;
     .header__button-for-mobile {
         display: flex;
         align-items: center;
-        position: fixed;
+        position: absolute;
         top: 24px;
         left: 285px;
         width: 16px;
