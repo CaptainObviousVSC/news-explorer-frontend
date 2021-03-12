@@ -7,7 +7,6 @@ function Header({ onLoginPopup }) {
             <p className="header__logo">NewsExplorer</p>
             <input id="header__toggle" type="checkbox" className="header__toggle" />
                 <label class="header__button-for-mobile" for="header__toggle">
-                    <span></span>
                 </label>
                 <ul class="header__box-for-mobile">
                <li><p className="header__main-link-selected_for-mobile">Главная</p></li>

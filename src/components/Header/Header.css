@@ -1,5 +1,6 @@
 .header {
     background-color: transparent;
+    position: relative;
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid rgba(196,196,196, 0.1);
@@ -50,7 +51,7 @@
 }
 .header__authorize {
     font-family: 'Roboto';
-    min-width: 210px;
+    width: 210px;
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
@@ -109,10 +110,10 @@ opacity: 0;
     display: none;
 }
 .header__box-for-mobile {
+    position: relative;
     padding-left: 10px;
     list-style: none;
     display: block;
-  position: fixed;
    visibility: hidden;
    left: -100%;
 }
@@ -121,6 +122,9 @@ opacity: 0;
         max-width: 768px;
         padding-right: 40px;
         padding-left: 40px;
+    }
+    .header__authorize {
+        max-width: 152px;
     }
     .header__saved-news-link {
         width: 160px;
@@ -184,7 +188,7 @@ opacity: 0;
         top: 0;
     }
     .header__toggle:checked ~ .header__box-for-mobile {
-        top: 72px;
+        top: 1px;
        visibility: visible;
        left: 10px;
     }

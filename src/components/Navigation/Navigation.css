@@ -5,6 +5,7 @@
     background-image: url('../../images/Main-picture.svg');
     object-fit: cover;
     background-position: center;
+    margin: 0 auto;
 }
 @media all and (max-width: 1250px) {
     .navigation {
