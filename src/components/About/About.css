@@ -1,0 +1,92 @@
+.about {
+    max-width: 1440px;
+    height: 624px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 80px;
+    padding-left: 104px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.about__avatar {
+    height: 464px;
+    margin-right: 56px;
+}
+
+.about__text-box {
+    /* height: 214px; */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__title {
+    font-family: 'Roboto Slab';
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 46px;
+}
+
+.about__text {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+}
+@media all and (max-width: 1300px) {
+    .about {
+        max-width: 1000px;
+    }
+}
+@media all and (max-width: 1100px) {
+    .about {
+        max-width: 768px;
+        height: 354px;
+        padding-left: 40px;
+        padding-top: 40px;
+    }
+    .about__avatar {
+        height: 232px;
+    }
+    .about__title {
+        max-width: 400px;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+    .about__text-box {
+        max-width: 400px;
+    }
+    .about__text {
+        max-width: 400px;
+        margin-top: 0;
+    }
+}
+@media all and (max-width: 650px) {
+    .about {
+        max-width: 320px;
+        height: 752px;
+        padding-left: 16px;
+        padding-top: 16px;
+        flex-direction: column;
+    }
+    .about__text-box {
+        max-width: 320px;
+    }
+    .about__avatar {
+        width: 272px;
+        height: 232px;
+        margin-right: 0;
+    }
+    .about__title {
+        max-width: 288px;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+    .about__text {
+        max-width: 288px;
+        margin-top: 0;
+    }
+}

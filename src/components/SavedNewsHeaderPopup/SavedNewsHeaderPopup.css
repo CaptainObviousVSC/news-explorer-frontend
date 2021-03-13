@@ -1,0 +1,20 @@
+.saved-news-header-popup__saved-news-link-selected { 
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-style: normal;
+    margin-top: 30px;
+    height: 50px;
+    color: black;
+}
+.saved-news-header-popup__main-link {
+    width: 69px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 500;
+    color: black;
+}

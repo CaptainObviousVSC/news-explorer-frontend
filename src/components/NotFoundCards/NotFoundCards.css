@@ -1,0 +1,36 @@
+.not-found-cards {
+    width: 1440px;
+    max-height: 374px;
+    background: #F5F6F7;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.not-found-cards__img {
+    margin-left: 672px;
+    margin-right: 672px;
+    width: 96px;
+    height: 96px;
+}
+.not-found-cards__title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 356px;
+    margin-top: 24px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+}
+.not-found-cards__text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 356px;
+    margin-top: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}

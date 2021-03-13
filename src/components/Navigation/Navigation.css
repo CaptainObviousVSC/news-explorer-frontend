@@ -1,0 +1,24 @@
+.navigation {
+    max-width: 1440px;
+    max-height: 800px;
+    background-color: transparent;
+    background-image: url('../../images/Main-picture.svg');
+    object-fit: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+@media all and (max-width: 1300px) {
+    .navigation {
+        max-width: 1000px;
+    }
+}
+@media all and (max-width: 1100px) {
+    .navigation {
+        max-width: 768px;
+        }
+  }
+  @media all and (max-width: 650px) {
+    .navigation {
+        max-width: 320px;
+        }
+  }

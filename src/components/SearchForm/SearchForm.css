@@ -1,0 +1,106 @@
+.search-form {
+    background-color: transparent;
+    max-width: 1440x;
+    height: 350px;
+    position: relative;
+}
+.search-form__field {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 0 auto;
+    max-width: 610px;
+    padding: 0;
+}
+.search-form__title {
+    max-width: 530px;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 64px;
+    font-style: normal;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.search-form__text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+    max-width: 505px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+.search-form__keywords-box {
+    display: flex;
+    flex-direction: row;
+}
+.search-form__keywords {
+    border: none;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1B22;
+    width: 440px;
+    height: 64px;
+    padding-left: 23px;
+    background-color: white;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.search-form__keywords::placeholder {
+    color: #B6BCBF;
+}
+.search-form__button {
+    background-color: #2F71E5;
+    width: 168px;
+    height: 64px;
+    margin-top: 0.5px;
+    margin-left: -60px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+.search-form__button:hover {
+    background-color: #347EFF;
+}
+.search-form__button:active {
+    background-color: #2A65CC;
+}
+@media all and (max-width: 650px) {
+    .search-form {
+        max-width: 320px;
+        height: 450px;
+    }
+    .search-form__title {
+        width: 285px;
+        margin-left: 19px;
+        margin-right: 19px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .search-form__text {
+        width: 288px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 122px;
+    }
+    .search-form__keywords-box {
+        flex-direction: column;
+    }
+    .search-form__keywords {
+        max-width: 288px;
+        padding-left: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .search-form__button {
+            width: 288px;
+            margin-top: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
