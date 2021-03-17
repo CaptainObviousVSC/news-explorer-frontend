@@ -118,19 +118,24 @@
     color: black;
 }
 
-.saved-news-header__toggle {
-opacity: 0;
-}
-.saved-news-header__button-for-mobile {
-    display: none;
-}
-.saved-news-header__box-for-mobile {
-    position: relative;
-    padding-left: 10px;
-    list-style: none;
-    display: block;
-   visibility: hidden;
-   left: -100%;
+.saved-news-header__logout {
+    font-family: 'Roboto';
+    width: 176px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-style: normal;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 40px;
+    background-image: url(../../images/logout.svg);
+    color: black;
+    background-position: 115px;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    margin-top: 19px;
+    margin-left: 20px;
+    height: 48px;
 }
 @media all and (max-width: 1300px) {
     .saved-news-header {
@@ -175,48 +180,6 @@ opacity: 0;
     .saved-news-header__logo {
         font-size: 16px;
         width: 117px;
-    }
-    .saved-news-header__button-for-mobile {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 24px;
-        right: 20px;
-        width: 16px;
-        height: 6px;
-        cursor: pointer;
-        z-index: 3;
-    }
-    .saved-news-header__button-for-mobile::before {
-        height: 2px;
-        width: 100%;
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: black;
-        top: -2px;
-    }
-    .saved-news-header__button-for-mobile::after {
-        height: 2px;
-        width: 16px;
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: black;
-        top: 4px;
-    }
-    .saved-news-header__toggle:checked ~ .saved-news-header__button-for-mobile::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-    .saved-news-header__toggle:checked ~ .saved-news-header__button-for-mobile::after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-    .saved-news-header__toggle:checked ~ .saved-news-header__box-for-mobile {
-        top: 1px;
-       visibility: visible;
-       left: 10px;
     }
      .saved-news-header__main-link {
         display: none;

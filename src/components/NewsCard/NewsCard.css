@@ -91,7 +91,7 @@
 .news-card__save:hover {
     background-image: url(../../images/save-button_hover.svg);
 }
-.news-card__save:active {
+.news-card__save_active {
     background-image: url(../../images/save-button_active.svg);
 }
 .news-card__delete {
@@ -129,6 +129,9 @@
  font-weight: 500;
  font-size: 14px;
  line-height: 24px;
+}
+.news-card__keyword-box_none {
+    display: none;
 }
 @media all and (max-width: 1300px) {
     .news-card {

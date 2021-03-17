@@ -1,6 +1,14 @@
 .preloader {
+	display: flex;
+	flex-direction: column;
     width: 1440px;
-    min-height: 100px;
+    min-height: 282px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding-left: 580px;
+	padding-right: 580px;
 	/* margin: 0;
 	min-height: 100vh;
 	background-color: #333;
@@ -11,18 +19,16 @@
 .circle-preloader {
 	display: block;
 	width: 50px;
-	min-height: 50px;
-	border: 4px solid #444;
+	height: 50px;
+	border: 1px solid #444;
 	border-bottom-color: #888;
 	
 	border-radius: 50%;
 	
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
+	top: 80px;
+	
+	bottom: 0; 
 	
 	animation: spin .75s infinite linear;
 }
@@ -30,6 +36,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
+	margin-top: 50px;
     font-size: 18px;
     line-height: 24px;
     color: #B6BCBF;

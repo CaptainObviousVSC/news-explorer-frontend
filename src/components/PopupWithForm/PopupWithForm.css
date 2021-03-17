@@ -16,6 +16,14 @@
     visibility: visible;
     opacity: 1;
 }
+.popup__error {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+}
   .popup__container {
     position: relative;
     width: 430px;
@@ -71,6 +79,22 @@
     margin-top: 39px;
     border: none;
     color: white;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+.popup__confirm_disabled{
+    width: 360px;
+    height: 64px;
+    background: #E6E8EB;
+    border-radius: 25px;
+    font-family: 'Roboto';
+    margin-top: 39px;
+    border: none;
+    color: #B6BCBF;
     padding: 0;
     font-style: normal;
     font-weight: normal;

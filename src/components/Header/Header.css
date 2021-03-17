@@ -57,21 +57,39 @@
     height: 50px;
     box-shadow: inset 0px -3px 0px white;
 }
-.header__authorize {
+.header__logout {
     font-family: 'Roboto';
-    width: 210px;
+    width: 176px;
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
     font-style: normal;
     background-color: transparent;
-    background-image: url(../../images/Rectangle.svg);
+    border: 2px solid white;
+    border-radius: 40px;
+    background-image: url(../../images/logout-white.svg);
     color: white;
-    border: none;
-    background-position: center;
+    background-position: 115px;
     background-repeat: no-repeat;
-    margin-top: 7px;
+    padding-right: 20px;
+    margin-top: 19px;
     margin-left: 20px;
+    height: 48px;
+}
+.header__authorize {
+    font-family: 'Roboto';
+    width: 176px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-style: normal;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    margin-top: 19px;
+    margin-left: 20px;
+    height: 48px;
 }
 .header__mobile {
     background-image: url(../../images/menu.svg);
@@ -96,7 +114,7 @@
         padding-left: 40px;
     }
     .header__authorize {
-        max-width: 152px;
+        width: 152px;
     }
     .header__text-box {
        margin-left: -120px;
@@ -125,6 +143,9 @@
     }
     .header__mobile {
       display: flex;
+    }
+    .header__logout {
+        display: none;
     }
     .header__main-link-selected {
         display: none;

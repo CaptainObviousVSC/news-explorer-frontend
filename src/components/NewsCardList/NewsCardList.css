@@ -23,6 +23,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
+    margin-left: 104px;
     line-height: 46px;
     color: #1A1B22;
 }
@@ -61,6 +62,9 @@
         margin-right: 40px;
         grid-gap: 8px;
     }
+    .news-card-list__title {
+        margin-left: 40px;
+    }
     .news-card-list__button {
         margin-left: 224px;
         width: 240px;
@@ -83,6 +87,9 @@
         max-width: 320px;
         padding-left: 16px;
         padding-right: 16px;
+    }
+    .news-card-list__title {
+        margin-left: 16px;
     }
     .news-card-list__button {
         width: 288px;
