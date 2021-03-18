@@ -4,9 +4,9 @@ import SavedNewsCard from '../SavedNewsCard/SavedNewsCard'
 import { Route, Switch} from 'react-router-dom'
 import CurrentUserContext from '../../contexts/CurrentUserContext'
 import  './NewsCardList.css'
-function NewsCardList({onSave, cardsMap, onDeleteCard, userCards, loggedIn, onLoginPopup}) {
+function NewsCardList({onSave, cardsMap, onDeleteCard, userCards, loggedIn, onLoginPopup, userCardsForFunction}) {
     const currentUser = React.useContext(CurrentUserContext);
-    console.log(userCards)
+    console.log(userCardsForFunction)
     console.log(cardsMap)
     const [count, setCount] = React.useState(3)
     function handleCountCards() {
@@ -14,12 +14,12 @@ function NewsCardList({onSave, cardsMap, onDeleteCard, userCards, loggedIn, onLo
     }
     function handleSavedCards() {
         if(!cardsMap) {
-          return  userCards.map((curd) => <NewsCard loggedIn={loggedIn} onLoginPopup={onLoginPopup} curd={curd} key={curd.id} onDeleteCard={onDeleteCard} currentUser={currentUser}/>)
+          return  userCards.map((curd) => <NewsCard loggedIn={loggedIn} onLoginPopup={onLoginPopup} userCardsForFunction={userCardsForFunction} curd={curd} key={curd._id} onDeleteCard={onDeleteCard} currentUser={currentUser}/>)
         }
     }
     function handleMainCards() {
         if(!userCards) {
-          return  cardsMap.slice(0, count).map((card) => <NewsCard loggedIn={loggedIn} onLoginPopup={onLoginPopup} card={card} key={card.url} onSave={onSave}/>)
+            return  cardsMap.slice(0, count).map((card) => <NewsCard loggedIn={loggedIn} onDeleteCard={onDeleteCard} userCardsForFunction={userCardsForFunction} onLoginPopup={onLoginPopup} card={card} key={card.link} onSave={onSave}/>)
         }
     }
             return (

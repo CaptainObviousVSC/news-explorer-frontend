@@ -5,7 +5,7 @@ class NewsApi {
         this.apiKey = apiKey
     }
     getArticles (keyword) {
-        return fetch(`${this.baseUrl}/everything?q=${keyword}&from=2021-03-01&to=2021-03-14&pageSize=100&apiKey=${this.apiKey}`)
+        return fetch(`${this.baseUrl}/everything?q=${keyword}&from=2021-03-11&to=2021-03-18&pageSize=100&apiKey=${this.apiKey}`)
         .then(res => {
             if(res.ok) {
                 console.log(keyword)

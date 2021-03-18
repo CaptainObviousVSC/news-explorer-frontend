@@ -1,7 +1,8 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import './NewsCard.css'
-function NewsCard({ card, onSave, curd, onDeleteCard, currentUser, loggedIn, onLoginPopup }) {
+function NewsCard({ card, onSave, curd, onDeleteCard, currentUser, loggedIn, onLoginPopup, userCardsForFunction }) {
+  console.log(userCardsForFunction)
   let article = {}
 if(!card) {
   article = {
@@ -27,7 +28,8 @@ const dateFormated = date.toLocaleString('ru-RU', options)
   const croppeText = text.substring(0, 127)
   const title = article.title;
   const croppeTitle = title.substring(0, 54)
-  const isSave = (path == '/' && (curd && curd.find(data => data.title === card.title)))
+  const isSave = (path == '/' && (userCardsForFunction && userCardsForFunction.find(data => data.title === card.title)))
+ const Card = userCardsForFunction.find((c) => c._id)
   // const isSaved = card.id.some(i => i._id === currentUser._id);
   // const cardSaveButton = `${isSaved ? 'news-card__save news-card__save_active' : 'news-card__save'}`;
   // const isOwn = card.owner._id === currentUser._id;
@@ -38,7 +40,7 @@ const dateFormated = date.toLocaleString('ru-RU', options)
     onSave(card)
   }
   function handleDelete() {
-    onDeleteCard(article._id)
+    onDeleteCard(Card._id)
   }
   return (
 //      <li className='news-card'>
@@ -64,7 +66,7 @@ const dateFormated = date.toLocaleString('ru-RU', options)
       <p className='news-card__keyword'>{article.keyword}</p>
       </div>
       <div className="news-card__container-for-buttons">
-      <button className={`news-card__save ${ path === '/' ? 'news-card__save' : 'news-card__delete'} `}
+      <button className={`news-card__button ${loggedIn && path === '/' && isSave ? 'news-card__save_active' : (path === '/' ? 'news-card__button-save' : 'news-card__delete')} `}
   onClick = {loggedIn ? (path === '/' ? handleSave : handleDelete ) : onLoginPopup} ></button>
       </div>
     <a className="news-card__link" href={article.link} target="_blank">

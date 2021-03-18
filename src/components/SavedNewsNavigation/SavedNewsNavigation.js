@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import SavedNewsHeaderPopup from '../SavedNewsHeaderPopup/SavedNewsHeaderPopup'
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader'
 import NewsCardList from '../NewsCardList/NewsCardList'
-function SavedNewsNavigation({ closePopups, headerPopupOpen, handleHeaderPopupOpen, onLogOut, onName, onSave, onDeleteCard, userCardsMap, loggedIn }) {
+function SavedNewsNavigation({ closePopups, headerPopupOpen, handleHeaderPopupOpen, userCardsForFunction, onLogOut, onName, onSave, onDeleteCard, userCardsMap, loggedIn }) {
     return (
         <nav>
           <SavedNewsHeaderPopup
@@ -16,7 +16,7 @@ function SavedNewsNavigation({ closePopups, headerPopupOpen, handleHeaderPopupOp
                     onLogOut={onLogOut}
                     onHeaderPopup={handleHeaderPopupOpen}
                     />
-                    <NewsCardList onSave={onSave} loggedIn={loggedIn} userCards={userCardsMap} onDeleteCard={onDeleteCard} />
+                    <NewsCardList onSave={onSave} loggedIn={loggedIn} onDeleteCard={onDeleteCard} userCardsForFunction={userCardsForFunction} userCards={userCardsMap} />
         </nav>
     );
 }

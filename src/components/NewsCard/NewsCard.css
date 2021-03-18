@@ -75,7 +75,7 @@
     margin-bottom: 24px;
     color: #B6BCBF; 
 }
-.news-card__save {
+.news-card__button {
     background-color: white;
     position: absolute;
     background-image: url(../../images/save-button.svg);
@@ -88,7 +88,7 @@
     top: 24px;
     right: 24px;
 }
-.news-card__save:hover {
+.news-card__button-save {
     background-image: url(../../images/save-button_hover.svg);
 }
 .news-card__save_active {

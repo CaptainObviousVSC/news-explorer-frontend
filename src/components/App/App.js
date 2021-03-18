@@ -22,7 +22,6 @@ import ProtectedRoute from '../../utils/ProtectedRoute'
 
 function App() {
     const history = useHistory()
-    const data = localStorage.getItem('articles')
 
     const [loginPopupOpen, setLoginPopupOpen] = React.useState(false)
     const [authorizePopupOpen, setAuthorizeOpen] = React.useState(false)
@@ -64,6 +63,7 @@ function App() {
                 setName(data.name)
               setIsLoggedIn(true)
               history.push('/')
+              localStorage.getItem('articles')
             }
           }).catch(err => {
             console.log(err.status) 
@@ -171,7 +171,7 @@ function App() {
           //   console.log(data)
           //   setUserCards(data)
           // })
-            return <NewsCardList cardsMap={cards}  onSave={SaveNewsCard} onLoginPopup={handleLoginPopupOpen}/>
+            return <NewsCardList cardsMap={cards} userCardsForFunction={userCards} loggedIn={isLoggedIn} onDeleteCard={handleCardDelete}  onSave={SaveNewsCard} onLoginPopup={handleLoginPopupOpen}/>
         }
         if(!cards) {
 
@@ -222,6 +222,7 @@ function App() {
           <Switch>
             <ProtectedRoute exact path="/savedNews"
               loggedIn={isLoggedIn}
+              userCardsForFunction={userCards}
               isOpen={headerPopupOpen}
               onClose={closePopups}
               onDeleteCard={handleCardDelete}
