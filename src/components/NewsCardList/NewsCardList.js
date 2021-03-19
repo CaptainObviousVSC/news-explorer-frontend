@@ -1,24 +1,39 @@
 import React from 'react';
 import NewsCard from '../NewsCard/NewsCard'
+import SavedNewsCard from '../SavedNewsCard/SavedNewsCard'
 import { Route, Switch} from 'react-router-dom'
+import CurrentUserContext from '../../contexts/CurrentUserContext'
 import  './NewsCardList.css'
-function NewsCardList({cards}) {
+function NewsCardList({onSave, cardsMap, onDeleteCard, userCards, loggedIn, onLoginPopup, userCardsForFunction}) {
+    const currentUser = React.useContext(CurrentUserContext);
+    console.log(userCardsForFunction)
+    console.log(cardsMap)
     const [count, setCount] = React.useState(3)
     function handleCountCards() {
         setCount(count + 3)
     }
-    return (
+    function handleSavedCards() {
+        if(!cardsMap) {
+          return  userCards.map((curd) => <NewsCard loggedIn={loggedIn} onLoginPopup={onLoginPopup} userCardsForFunction={userCardsForFunction} curd={curd} key={curd._id} onDeleteCard={onDeleteCard} currentUser={currentUser}/>)
+        }
+    }
+    function handleMainCards() {
+        if(!userCards) {
+            return  cardsMap.slice(0, count).map((card) => <NewsCard loggedIn={loggedIn} onDeleteCard={onDeleteCard} userCardsForFunction={userCardsForFunction} onLoginPopup={onLoginPopup} card={card} key={card.link} onSave={onSave}/>)
+        }
+    }
+            return (
         <div className="news-card-list-border">
             <Switch>
                 <Route path="/savedNews">
                 <ul className="news-card-list">
-                {cards.map((card) => <NewsCard card={card} />)}
+                {handleSavedCards()}
             </ul>
                 </Route>
                 <Route path="/">
                     <h2 className="news-card-list__title">Результаты поиска</h2>
                     <ul className="news-card-list">
-                {cards.slice(0, count).map((card) => <NewsCard card={card} />)}
+                {handleMainCards()}
             </ul>
             <button className="news-card-list__button" onClick={handleCountCards}>Показать ещё</button>
                 </Route>
