@@ -3,25 +3,24 @@ import { Link } from 'react-router-dom'
 import './SavedNewsHeader.css'
 function SavedNewsHeader({ onHeaderPopup, onLogOut, onName, userCardsMap }) {
     const keywords = userCardsMap.map(i => i.keyword)
-    console.log(keywords)
+    // console.log(keywords.sort())
+    const firstKeyword =  keywords.shift(0)
+    const secondKeyword = keywords.shift(0)
+    const thirdKeyword  = keywords.shift(0)
     function checkKeywords() {
-        if (keywords.length = 1) {
+        if (keywords.length <= 1) {
             return 'Нет карточек, нет ключевых слов :)'
         }
-        if(keywords.length = 2) {
-            return `По ключевым словам: ${firstKeyword}`
+        if(keywords.length === 2) {
+         return `По ключевым словам: ${firstKeyword}`
         }
-        if(keywords.length = 3) {
+        if(keywords.length === 3) {
          return `По ключевым словам: ${firstKeyword}, ${secondKeyword}`
      }
      if(keywords.length >= 4) {
          return `По ключевым словам: ${firstKeyword}, ${secondKeyword} и ${keywords.length >= 1 ? `${keywords.length}-м другим`  : thirdKeyword }`
      }
     }
-   const firstKeyword =  keywords.shift(0)
-   const secondKeyword = keywords.shift(0)
-   const thirdKeyword  = keywords.shift(0)
-    console.log(keywords)
     const keywordsTitle = `${onName}, у вас ${userCardsMap.length} сохранённых статей`
     return (
         <section className="saved-news-header">
